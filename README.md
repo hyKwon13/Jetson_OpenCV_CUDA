@@ -27,19 +27,36 @@
 이 가이드는 NVIDIA Jetson에서 CUDA와 PaddleOCR 환경을 구축하는 방법에 대해 설명합니다. SD 카드 포맷, Jetpack SDK 설치, 고정 IP 설정, Python 3.7과 OpenCV CUDA 빌드, Paddlepaddle 및 PaddleOCR 설치 과정 등을 단계별로 안내합니다. Jetson을 이용한 딥러닝 프로젝트 환경을 구축하는 데 유용한 정보들을 포함하고 있습니다.
 
 ## 필수: SD카드 Jetpack SDK 설치
-1. **SD 카드 포맷**: SD Card Formatter를 사용하여 64GB microSD 카드를 포맷합니다. [SD Card Formatter 다운로드](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/)
+1. **SD 카드 포맷**: SD Card Formatter를 사용하여 64GB microSD 카드를 포맷
+    - [SD Card Formatter 다운로드](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/)
+    - 포맷 버튼을 클릭하여 포맷을 완료
+    - ![이미지](https://github.com/hyKwon13/Jetson-nano_PaddleOCR_CUDA/assets/117807382/40fec450-6ca2-48fe-b878-b73b55925ef2)
 
-2. **Jetpack SDK 4.6.1 설치**: [Jetpack SDK 다운로드](https://developer.nvidia.com/embedded/jetpack-sdk-461)
+2. **Jetpack SDK 4.6.1 설치**:
+    - [Jetpack SDK 다운로드](https://developer.nvidia.com/embedded/jetpack-sdk-461)
 
-3. **balenaEtcher 사용**: balenaEtcher를 사용하여 microSD 카드에 이미지 설치. [Etcher 다운로드](https://etcher.balena.io/)
+3. **balenaEtcher 사용**: balenaEtcher 프로그램을 사용하여 microSD 카드에 이미지 설치.
+    - [Etcher 다운로드](https://etcher.balena.io/)
 
 ## 필수: Jetpack Ubuntu 초기 설정
 1. **모든 설정은 기본 값으로 설정**
 
 ## 필수: Jetson 고정 IP 설정
-1. **System Settings**에서 네트워크 설정을 변경하여 고정 IP 설정.
-2. **Network** -> **Wired 옵션** -> **IPv4 Settings에서 Manual**로 변경하여 원하는 IP 설정 후 저장.
+1. **초기 화면에서 우측 상단의 System Settings 클릭**
+    - ![KakaoTalk_20241108_145417910_05](https://github.com/hyKwon13/python3.7_opencv/blob/f46a90015cf6355457f6459d08adf51f12636937/KakaoTalk_20241108_145417910_05.jpg)
 
+2. **Network 클릭**
+    - ![KakaoTalk_20241108_145417910_04](https://github.com/hyKwon13/python3.7_opencv/blob/f46a90015cf6355457f6459d08adf51f12636937/KakaoTalk_20241108_145417910_04.jpg)
+
+3. **3번째 wired에서 option 클릭**
+    - ![KakaoTalk_20241108_145417910_03](https://github.com/hyKwon13/python3.7_opencv/blob/f46a90015cf6355457f6459d08adf51f12636937/KakaoTalk_20241108_145417910_03.jpg)
+
+4. **IPv4 Settings 에서 Manual 클릭**
+    - ![KakaoTalk_20241108_145417910_02](https://github.com/hyKwon13/python3.7_opencv/blob/f46a90015cf6355457f6459d08adf51f12636937/KakaoTalk_20241108_145417910_02.jpg)
+
+5. **원하는 IP 설정한 뒤 Netmask 255.255.255.0, Gateway 192.168.2.1로 저장 후 재부팅 시 IP 변경됨**
+    - ![KakaoTalk_20241108_145417910_01](https://github.com/hyKwon13/python3.7_opencv/blob/f46a90015cf6355457f6459d08adf51f12636937/KakaoTalk_20241108_145417910_01.jpg)
+  
 ## 필수: Jetson OpenCV CUDA 환경 설정
 
 ### 1. Python 3.7 설치 및 numpy 설치
