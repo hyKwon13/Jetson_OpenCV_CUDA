@@ -46,7 +46,7 @@
     - ![KakaoTalk_20241108_145417910_01](https://github.com/hyKwon13/python3.7_opencv/blob/f46a90015cf6355457f6459d08adf51f12636937/KakaoTalk_20241108_145417910_01.jpg)
 
 
-## 필수: 젯슨 OpenCV CUDA 환경 설정
+## 필수: Jetson OpenCV CUDA 환경 설정
 
 ### 1. Python 3.7 설치 및 numpy 설치 
 - 주의: Jetson은 ARM 타입 아키텍처이므로 x86 python 설치시 OpenCV CUDA 빌드 불가능
